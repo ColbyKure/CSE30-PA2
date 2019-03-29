@@ -1,0 +1,96 @@
+/*
+ * Filename: README
+ * Author: Colby Kure
+ * Userid: cs30xdc
+ * Date: 5/9/18
+ * Sources of help: lecture and discussion notes
+ */
+
+-------------------------------------------------------------------------------
+Description:
+This program prints out a BCD clock to stdout. The user may specify a time and
+a number of ticks. The program prints out the specified time, otherwise it
+uses the current time. If number of ticks is not specified then, use the 
+default number of ticks. The border around the clock shows AM or PM.
+-------------------------------------------------------------------------------
+How to compile:
+Navigate to directory with the files for pa2. Then execute the make 
+command and the Makefile in pa2 will run and will compile and link
+all the required files for pa2 and creates an execuatable named pa2
+-------------------------------------------------------------------------------
+How to run:
+./ followed by the name of the execuatable
+Just type ./pa2 into the terminal once you have compiled the program
+correctly with make. 
+-------------------------------------------------------------------------------
+Normal output:
+	./pa2 1
+	
+Wed. May  9 18:43:04 2018
+
+PPPPPPPPPPPP
+M .. .. .. M
+P .O O. .O P
+M .O .O .. M
+P .. .O .. P
+M 06 43 04 M
+PPPPPPPPPPPP
+
+PPPPPPPPPPPP
+M .. .. .. M
+P .O O. .O P
+M .O .O .. M
+P .. .O .O P
+M 06 43 05 M
+PPPPPPPPPPPP
+-----------------------------------------------------------------------------
+Abnormal output:
+	./pa2 1a 3
+
+Starting time must be formatted as HH:MM:SS(A|a|P|p)
+
+--------------------------------------------------------------------------------
+Testing:
+I tested my program by trying out the edge cases like when the tickClock must
+update the hour value and possibly the time of day. I also ran through my code
+with gdb to make sure that everything was in the correct memory locations and
+that the values were being computed as I expected them to. I also used the unit
+testing from the milestone to really make sure that my functions were working as
+intended.
+
+-------------------------------------------------------------------------------
+Question 1:
+I try to read the outline for the PA early on so that I can think about it
+during the week and I start early so that I can finish early
+-------------------------------------------------------------------------------
+Question 2:
+*(arr + sizeof(int) * n)	//where n is the index
+-------------------------------------------------------------------------------
+Qustion 3:
+:%s/foo/bar/gc
+-------------------------------------------------------------------------------
+Question 4:
+:split filename		//horozontal split
+:vsplit filename 	//vertical split
+C^w + direction 	//moves to adjacent window in that direction
+-------------------------------------------------------------------------------
+Question 5:
+:!q			//need ! to override 
+-------------------------------------------------------------------------------
+Question 6:
+:set list 		//shows whitespaces and enters too
+-------------------------------------------------------------------------------
+Question 7:
+:set nu
+-------------------------------------------------------------------------------
+Question 8:
+grep -A 5 -B 5 errno main.c
+-------------------------------------------------------------------------------
+Question 9:
+chmod 000 file.txt
+ls -l file.txt
+-------------------------------------------------------------------------------
+Question 10:
+less +n file.txt		// opens/shows file at line n
+vim +n file.txt			// opens file at line n 
+-------------------------------------------------------------------------------
